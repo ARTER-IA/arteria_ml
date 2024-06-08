@@ -49,25 +49,43 @@ data = data[selected_variables]
 # Renombramos las columnas
 data = data.rename(
     columns={
-        "Current Smoker": "Current_Smoker",
-        "EX-Smoker": "EX_Smoker",
-        "Thyroid Disease": "Thyroid_Disease",
-        "Weak Peripheral Pulse": "Weak_Peripheral_Pulse",
-        "Q Wave": "Q_Wave",
-        "St Elevation": "St_Elevation",
-        "St Depression": "St_Depression",
-        "Poor R Progression": "Poor_R_Progression",
+        "Age": "age",
+        "Weight": "weight",
+        "Length": "length",
+        "Sex": "sex",
+        "BMI": "bmi",
+        "DM": "dm",
+        "HTN": "htn",
+        "Current Smoker": "current_Smoker",
+        "EX-Smoker": "ex_Smoker",
+        "FH": "fh",
+        "Obesity": "obesity",
+        "CVA": "cva",
+        "Thyroid Disease": "thyroid_Disease",
+        "BP": "bp",
+        "PR": "pr",
+        "Weak Peripheral Pulse": "weak_Peripheral_Pulse",
+        "Q Wave": "q_Wave",
+        "St Elevation": "st_Elevation",
+        "St Depression": "st_Depression",
+        "Tinversion": "tinversion",
+        "LVH": "lvh",
+        "Poor R Progression": "poor_R_Progression",
+        "TG": "tg",
+        "LDL": "ldl",
+        "HDL": "hdl",
+        "HB": "hb",
     }
 )
 
 # Conversión de valores categóricos a valores binarios
 binary_cols = [
-    "Obesity",
-    "CVA",
-    "Thyroid_Disease",
-    "Weak_Peripheral_Pulse",
-    "LVH",
-    "Poor_R_Progression",
+    "obesity",
+    "cva",
+    "thyroid_Disease",
+    "weak_Peripheral_Pulse",
+    "lvh",
+    "poor_R_Progression",
 ]
 
 for col in binary_cols:
